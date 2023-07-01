@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="static/css/style.css"  th:href="@{/css/style.css}" />
+  </head>
+
+   <body id="contacto">
+	
+		<button>Menu</button>
+    	<ul>
+		    <li><a href="/">Inicio</a></li>
+		    <li><a href="/contacto">Contacto</a></li>
+		    <li><a href="/capacitacion">Crear Capacitación</a></li>
+		    <li><a href="ListarCapacitaciones">Ver Capacitaciones</a></li>
+		</ul>
+	
+	
+	  <form th:action="@{/contacto}" method="POST" th:object="${contacto}" id="contacto-form">
+	    <fieldset>
+	      <legend> Contacto </legend>
+	      <div>
+	        <label for="nombre">Nombre: </label>
+	        <input type="text" name="nombre" th:field="*{nombre}" id="email" placeholder="Ingrese su nombre" title="Su nombre pue oiga!" required>
+	      </div>
+	      <div>
+	        <label for="email">Email: </label>
+	        <input type="email" name="email" th:field="*{email}" id="email" placeholder="Ingrese su email" title="Su email cabellero!!" required>
+	      </div>
+	      <div>
+	        <label for="mensaje">Mensaje: </label>
+	        <textarea name="mensaje" id="mensaje" th:field="*{mensaje}" placeholder="Su mensaje..." title="Escriba su ocurrencia acá" required></textarea>
+	      </div>
+	      <input type="submit">
+	    </fieldset>
+	      
+	  </form>
+	   <script src="/js/index.js" ></script>
+	</body>
+
+</html>

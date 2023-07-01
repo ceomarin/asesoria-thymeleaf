@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="static/css/style.css"  th:href="@{/css/style.css}" />
+  </head>
+<body id="crearcapacitacion">
+		<button>Menu</button>
+    	<ul>
+		    <li><a href="/">Inicio</a></li>
+		    <li><a href="/contacto">Contacto</a></li>
+		    <li><a href="/capacitacion">Crear Capacitación</a></li>
+		    <li><a href="ListarCapacitaciones">Ver Capacitaciones</a></li>
+		</ul>
+	
+	    <form action="capacitacion" method="POST" id="crearcapacitacion-form">
+			<fieldset>
+			    <legend>Capacitacion</legend>
+		        <label for="rutCliente">Rut Cliente: </label>
+		        <input type="text" name="rut" id="rut" pattern="\d{6,8}-[kK\d]" placeholder="12345678-0" title="12345678-0"
+		            required>
+		        <br>
+		        <label for="fecha">Fecha: </label>
+		        <input type="date" name="fecha" id="fecha" required>
+		        <br>
+		        <label for="dia">Dia: </label>
+		        <select name="dia" id="dia">
+		            <option value="lunes">Lunes</option>
+		            <option value="martes">Martes</option>
+		            <option value="miercoles">Miercoles</option>
+		            <option value="jueves">Jueves</option>
+		            <option value="viernes">Viernes</option>
+		            <option value="sabado">Sabado</option>
+		            <option value="domingo">Domingo</option>
+		        </select>
+		        <br>
+		        <label for="hora">Hora: </label>
+		        <input type="time" name="hora" id="hora" required>
+		        <br>
+		        <label for="lugar">Lugar: </label>
+		        <input type="text" name="lugar" id="lugar" placeholder="Ingrese Lugar" title="Ingrese Lugar" required>
+		        <br>
+		        <label for="asistentes">Asistentes: </label>
+		        <input type="number" name="asistentes" id="asistentes" placeholder="123" title="123" required>
+		        <br>
+		        <input type="submit" value="Enviar">
+	        </fieldset>
+	    </form>
+	    
+	    <script src="/js/index.js"></script>
+	</body>
+</html>

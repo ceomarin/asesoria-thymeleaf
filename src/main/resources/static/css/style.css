@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Noto+Sans&display=swap');
+
+:root {
+  --fresh: #F7F5E6;
+  --vermillion: #333A56;
+  --sunshine: #52658F;
+  --clean: #E8E8E8;
+  --merri: 'Merriweather', serif;
+  --noto: 'Noto Sans', sans-serif;
+}
+
+/* Micro reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+a,
+a:visited {
+  color: var(--clean);
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    flex-direction:  column-reverse;
+    align-items: stretch !important;
+  }
+}
+
+/**************
+*   INDEX    *
+**************/
+
+body#index{
+  display: flex;
+  justify-content: space-between;
+}
+
+#index-main,
+#index-hero {
+  flex-grow: 1;
+  max-width: 50vw;
+}
+
+#index-main {
+  display: flex;
+  background-color: var(--fresh);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#index-banner {
+  max-width: 50%;
+  font-family: var(--merri);
+  font-style: italic;
+  font-size: 3rem;
+  color: var(--vermillion);
+}
+
+#index-banner span {
+  font-weight: 800;
+}
+
+#index-logo {
+  height: clamp(300px, 40vh, 400px);
+}
+
+#index-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    background-color: var(--vermillion);
+    background-image: url('../images/hero-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  padding: 0.5rem 0;
+  width: 10rem;
+  
+  color: var(--clean);
+  border: 4px solid var(--clean);
+  border-radius: 15px;
+  background-color: transparent;
+  outline: transparent;
+
+  font-size: 1.25rem;
+  font-family: var(--noto);
+}
+
+ul {
+  position: relative;
+  top: 10px;
+  right: -350px;
+  
+  list-style: none;
+  padding: 0;
+  transition: all 300ms ease-in-out;
+  
+  opacity: 0;
+  background: var(--vermillion);
+  color: var(--fresh);
+  font-family: var(--noto);
+  font-size: 1.25rem;
+  
+  border: 2px solid var(--fresh);
+  border-collapse: collapse;
+  border-radius: 4px;
+}
+
+li {
+  color: var(--fresh);
+  border: 1px solid var(--clean);
+}
+
+li a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  transition: all 200ms ease-in;
+}
+
+ 
+a:hover {
+	background-color: var(--fresh);
+	color: var(--vermillion);
+	border: 2px solid var(--vermillion);
+	border-radius: 8px;
+}
+
+ul.aparecer {
+  right: 0;
+  opacity: 1;
+}
+
+/**********  LOGIN ***********/
+/********** CONTACTO *********/
+
+body#login {
+  display: grid;
+  place-content: center;
+
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  font-family: var(--noto);
+  color: var(--clean);
+}
+
+#login-form,
+#contacto-form,
+#crearcapacitacion-form {
+  color: var(--fresh);
+  font-size: 1rem;
+  width: fit-content;
+  /* width: clamp(300px, 50vw, 400px); */
+}
+
+#login-form legend,
+#contacto-form legend,
+#crearcapacitacion-form  {
+  font-size: 1.25rem;
+}
+
+#login-form label,
+#contacto-form label,
+#crearcapacitacion-form {
+  margin-right: 2rem;
+}
+
+#login-form div,
+#contacto-form div,
+#crearcapacitacion-form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#login-form div:first-of-type,
+#contacto-form div:first-of-type, 
+#contacto-form div:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+#login-form fieldset,
+#contacto-form fieldset,
+#crearcapacitacion-form fieldset {
+  padding: 1.75rem 3rem;
+  border: 2px solid var(--fresh);
+  border-radius: 5px;
+}
+
+#login-form input,
+#contacto-form input,
+#crearcapacitacion-form input {
+  border: var(--fresh);
+  font-family: var(--noto);
+  background-color: var(--fresh);
+}
+
+#login-form input[type="submit"], 
+#contacto-form input[type="submit"],
+#crearcapacitacion-form input[type="submit"] {
+  opacity: 0;
+}
+
+/******* LISTAR CAPACITACIONES ***********/
+body#listarcapacitaciones, 
+body#crearcapacitacion,
+body#contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  
+/*   place-content: center; */
+
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  font-family: var(--noto);
+  color: var(--clean);
+}
+
+#listarcapacitaciones button, 
+#listarcapacitaciones ul,
+#crearcapacitacion button, 
+#crearcapacitacion ul,
+#contacto button, 
+#contacto ul {
+	align-self: end;
+}
+
+#listarcapacitaciones table,
+#listarcapacitaciones tr,
+#listarcapacitaciones td,
+#listarcapacitaciones th  {
+	border: 2px solid var(--sunshine);
+	border-collapse: collapse;
+	background-color: var(--clean);
+	color: var(--vermillion);
+}
+
+#listarcapacitaciones td,
+#listarcapacitaciones th {
+	padding: 0.5rem;
+}
+
+#listarcapacitaciones caption {
+	font-size: 1.5rem;
+	color: var(--clean);
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
