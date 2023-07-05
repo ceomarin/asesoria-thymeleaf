@@ -11,7 +11,13 @@ public class ContactoServicio {
 	@Autowired
 	private ContactoRepositorio contactoRepositorio;
 	
+	//create
 	public Contacto crearContacto(Contacto c) {
 		return contactoRepositorio.save(c);
 	}
+	//read
+	
+	//update
+	//delete
+	
 }

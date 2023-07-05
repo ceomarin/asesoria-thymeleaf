@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all" 
+          href="static/css/style.css"  th:href="@{/css/style.css}" />
+</head>
+<body id="listarcapacitaciones">
+
+	<button>Menu</button>
+   	<ul>
+	    <li><a href="/">Inicio</a></li>
+	    <li><a href="/contacto">Contacto</a></li>
+	    <li><a href="/capacitacion">Crear Capacitación</a></li>
+	    <li><a href="/capacitaciones">Ver Capacitaciones</a></li>
+	</ul>
+	<table>
+		<caption>Listado de capacitaciones</caption>
+		<thead>
+		</thead>
+			<tr>
+				<th>Id</th>
+				<th>Rut Cliente</th>
+				<th>Fecha</th>
+				<th>Día</th>
+				<th>Hora</th>
+				<th>Lugar</th>
+				<th>Duración</th>
+				<th>Asistentes</th>
+			</tr>
+		<tbody>
+		
+			<tr>
+				<td>cap-001</td>
+				<td>14.320.275-0</td>
+				<td>01/01/2023</td>
+				<td>Lunes</td>
+				<td>10:00</td>
+				<td>Sala A201</td>
+				<td>2 horas</td>
+				<td>70</td>
+			</tr>
+
+		
+		</tbody>
+		
+	</table>
+	<script src="js/index.js" th:src="@{/js/index.js}"></script>
+</body>
+</html>

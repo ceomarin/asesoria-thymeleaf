@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Good Thymes Virtual Grocery</title>
@@ -14,7 +15,7 @@
 		    <li><a href="ListarCapacitaciones">Ver Capacitaciones</a></li>
 		</ul>
 	
-	    <form action="capacitacion" method="POST" id="crearcapacitacion-form">
+	    <form action="@{/capacitacion}" method="POST" id="crearcapacitacion-form">
 			<fieldset>
 			    <legend>Capacitacion</legend>
 		        <label for="rutCliente">Rut Cliente: </label>
